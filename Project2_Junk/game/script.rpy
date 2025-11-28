@@ -1,35 +1,38 @@
 ﻿# The script of the game goes in this file.
 
-# Declare characters used by this game. The color argument colorizes the
-# name of the character.
+define j = Character("Jasmine", color="#c8ffc8")
 
-define e = Character("Jasmine", color="#c8ffc8")
+image Jasmine Neutral= "sprite_smile_open.png"
+image Jasmine Blinking = "sprite_blink.png"
 
-image Character Smiling = "Character_Smiling.png"
+image bg room = "basic_background_gradient.png"
 
+image jasmine: 
+    "sprite_smile_open.png"
+    3.0
+    "sprite_blink.png"
+    0.15
+    repeat
+
+transform zoom_in:
+    zoom 1.5
+
+transform center: 
+    xalign 0.5
+    yalign 0.5
 
 # The game starts here.
 
 label start:
+    show bg room at zoom_in
 
-    # Show a background. This uses a placeholder by default, but you can
-    # add a file (named either "bg room.png" or "bg room.jpg") to the
-    # images directory to show it.
-     
+    show jasmine at center
+    show jasmine at zoom_in
+    j "Hey! I don't think we've met before. I'm Jasmine."
 
-    scene bg room
+    j "What's your name?"
 
-    # This shows a character sprite. A placeholder is used, but you can
-    # replace it by adding a file named "eileen happy.png" to the images
-    # directory.
-
-    show Character Smiling at center
-
-    # These display lines of dialogue.
-
-    e "You've created a new Ren'Py game."
-
-    e "Once you add a story, pictures, and music, you can release it to the world!"
+    j "Nice to meet you! Say, would you like to go on an adventure with me?"
 
     # This ends the game.
 
