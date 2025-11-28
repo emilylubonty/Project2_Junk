@@ -3,7 +3,9 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define e = Character("Name")
+define e = Character("Jasmine", color="#c8ffc8")
+
+image Character Smiling = "Character_Smiling.png"
 
 
 # The game starts here.
@@ -21,7 +23,7 @@ label start:
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
 
-    show eileen happy
+    show Character Smiling at center
 
     # These display lines of dialogue.
 
