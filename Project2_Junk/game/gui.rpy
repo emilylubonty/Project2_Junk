@@ -25,17 +25,17 @@ define config.check_conflicting_properties = True
 ## The colors of text in the interface.
 
 ## An accent color used throughout the interface to label and highlight text.
-define gui.accent_color = '#2f33f7'
+define gui.accent_color = "#440d69"
 
 ## The color used for a text button when it is neither selected nor hovered.
-define gui.idle_color = '#EAC4FF'
+define gui.idle_color = "#764B8D"
 
 ## The small color is used for small text, which needs to be brighter/darker to
 ## achieve the same effect.
 define gui.idle_small_color = '#606060'
 
 ## The color that is used for buttons and bars that are hovered.
-define gui.hover_color = "#FC1C86"
+define gui.hover_color = "#743B6F"
 
 ## The color used for a text button when it is selected but not focused. A
 ## button is selected if it is the current screen or preference value.
@@ -46,12 +46,12 @@ define gui.insensitive_color = '#7070707f'
 
 ## Colors used for the portions of bars that are not filled in. These are not
 ## used directly, but are used when re-generating bar image files.
-define gui.muted_color = "#7c0202"
-define gui.hover_muted_color = '#d69999'
+define gui.muted_color = "#450455"
+define gui.hover_muted_color = "#9842A0"
 
 ## The colors used for dialogue and menu choice text.
-define gui.text_color = '#404040'
-define gui.interface_text_color = '#404040'
+define gui.text_color = "#290527"
+define gui.interface_text_color = "#24071B"
 
 
 ## Fonts and Font Sizes ########################################################

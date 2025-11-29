@@ -1,25 +1,31 @@
 ﻿# The script of the game goes in this file.
 
-define j = Character("Jasmine", color="#c8ffc8")
+# Jasmine's character definition
+define j = Character("Jasmine", color="#6f1a91")
 
-image Jasmine Neutral= "sprite_smile_open.png"
-image Jasmine Blinking = "sprite_blink.png"
+image Jasmine Neutral= "Jasmine.png"
+image Jasmine Blinking = "Jasmine Blink.png"
 
-image bg room = "basic_background_gradient.png"
+image bg room = "Bookshelf Filled.png"
 
 image jasmine: 
-    "sprite_smile_open.png"
+    "Jasmine.png"
     3.0
-    "sprite_blink.png"
+    "Jasmine Blink.png"
     0.15
     repeat
 
+# Jasmine's transforms
 transform zoom_in:
     zoom 1.5
 
 transform center: 
-    xalign 0.5
+    xalign 0.9
     yalign 0.5
+
+# POV character definition
+default povname = ""
+define pov = Character("[povname]")
 
 # The game starts here.
 
@@ -32,8 +38,16 @@ label start:
 
     j "What's your name?"
 
-    j "Nice to meet you! Say, would you like to go on an adventure with me?"
+    $povname = renpy.input("What is your name?", length = 32)
+    $povname = povname.strip()
 
-    # This ends the game.
+    if not povname:
+        $povname = "Nameless One"
+    
+    j "Nice to meet you, [povname]!"
+
+    j "Say, [povname] would you like to go on an adventure with me?"
+
+
 
     return
