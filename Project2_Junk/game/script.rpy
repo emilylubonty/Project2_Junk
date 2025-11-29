@@ -24,8 +24,9 @@ transform center:
     xalign 0.9
     yalign 0.5
 
-transform fade_out:
-    linear 2.0 
+transform slide_right:
+    xalign 0.9
+    linear 1.0 xalign 1.4
 
 
 # POV character definition
@@ -70,9 +71,13 @@ label begin_adventure:
 
     show jasmine at center
     show jasmine at zoom_in
-    j "Glad to see you've made it. You're probably wondering where I'm taking you."
-    j "Well... It's difficult to explain. But I promise you'll like it!"
+    j "Glad to see you've made it. You're probably wondering where you are."
+    j "Well... I'll explain soon. Let me show you something important."
 
+    show jasmine at slide_right
+    j "Follow me!"
+
+    
     
 
     return
