@@ -7,6 +7,7 @@ image Jasmine Neutral= "Jasmine.png"
 image Jasmine Blinking = "Jasmine Blink.png"
 
 image bg room = "Bookshelf Filled.png"
+image bg room empty = "Bookshelf Empty.png"
 
 image jasmine: 
     "Jasmine.png"
@@ -22,6 +23,10 @@ transform zoom_in:
 transform center: 
     xalign 0.9
     yalign 0.5
+
+transform fade_out:
+    linear 2.0 
+
 
 # POV character definition
 default povname = ""
@@ -48,6 +53,26 @@ label start:
 
     j "Say, [povname] would you like to go on an adventure with me?"
 
+    $povname = renpy.input("Do you want to go on an adventure with Jasmine? (yes/no)", length = 3)
+    $povname = povname.strip().lower()
 
+    if povname == "yes":
+        j "Yipee! Let's go!"
+        jump begin_adventure
+    else:
+        j "Oh... Okay..."
+        j "You can deal with this entire scene again then."
+        jump start
+
+label begin_adventure:
+
+    show bg room empty at zoom_in
+
+    show jasmine at center
+    show jasmine at zoom_in
+    j "Glad to see you've made it. You're probably wondering where I'm taking you."
+    j "Well... It's difficult to explain. But I promise you'll like it!"
+
+    
 
     return
