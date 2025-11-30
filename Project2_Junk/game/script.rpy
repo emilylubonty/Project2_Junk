@@ -82,9 +82,9 @@ label begin_adventure:
     show Journal Choices at zoom_in
 
     j "[povname], I'm assigning you a task."
-    j "You need to choose one journal to document our adventure, as you'll have no recollection of this ever happening later."
+    j "You need to choose one journal to document your time spent here, as you'll have no recollection of this ever happening later."
     j "Choose wisely!"
 
-    
+
 
     return
