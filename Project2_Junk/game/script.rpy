@@ -1,6 +1,7 @@
 ﻿# The script of the game goes in this file.
 
 # Jasmine's character definition
+
 define j = Character("Jasmine", color="#6f1a91")
 
 image Jasmine Neutral= "Jasmine.png"
@@ -11,6 +12,18 @@ image bg room empty = "Bookshelf Empty.png"
 
 image Journal Choices = "Choices.png"
 
+screen input_screen():
+        frame:
+            xpadding 30
+            ypadding 30
+            
+            align (0.5, 0.5)
+
+            vbox:
+                text "Choose your journal:" 
+                textbutton "Mystic Journal" action Return("Mystic Journal") 
+                textbutton "Froggie Journal" action Return("Froggie Journal") 
+                textbutton "Wrecked Journal" action Return("Wrecked Journal") 
 image jasmine: 
     "Jasmine.png"
     3.0
@@ -85,14 +98,7 @@ label begin_adventure:
     j "You need to choose one journal to document your time spent here, as you'll have no recollection of this ever happening later."
     j "Choose wisely!"
 
-    screen input_screen():
-        window:
-            has vbox
-            text "Choose your journal:" 
-            textbutton "Mystic Journal" action Return("Mystic Journal")
-            textbutton "Froggie Journal" action Return("Froggie Journal")
-            textbutton "Crunchy Journal" action Return("Puddle Journal")
-        $ chosen_journal = renpy.call_screen("input_screen")
+    $ chosen_journal = renpy.call_screen("input_screen") 
 
 
     return
