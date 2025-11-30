@@ -9,6 +9,8 @@ image Jasmine Blinking = "Jasmine Blink.png"
 image bg room = "Bookshelf Filled.png"
 image bg room empty = "Bookshelf Empty.png"
 
+image Journal Choices = "Choices.png"
+
 image jasmine: 
     "Jasmine.png"
     3.0
@@ -71,13 +73,18 @@ label begin_adventure:
 
     show jasmine at center
     show jasmine at zoom_in
-    j "Glad to see you've made it. You're probably wondering where you are."
+    j "Glad to see you've made it. You're probably wondering why I brought you here."
     j "Well... I'll explain soon. Let me show you something important."
 
     show jasmine at slide_right
     j "Follow me!"
 
-    
+    show Journal Choices at zoom_in
+
+    j "[povname], I'm assigning you a task."
+    j "You need to choose one journal to document our adventure, as you'll have no recollection of this ever happening later."
+    j "Choose wisely!"
+
     
 
     return
