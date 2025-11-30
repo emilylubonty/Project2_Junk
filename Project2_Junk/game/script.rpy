@@ -56,10 +56,10 @@ label start:
 
     j "Say, [povname] would you like to go on an adventure with me?"
 
-    $povname = renpy.input("Do you want to go on an adventure with Jasmine? (yes/no)", length = 3)
-    $povname = povname.strip().lower()
+    $response = renpy.input("Do you want to go on an adventure with Jasmine? (yes/no)", length = 3)
+    $response = response.strip().lower()
 
-    if povname == "yes":
+    if response == "yes":
         j "Yipee! Let's go!"
         jump begin_adventure
     else:
@@ -85,6 +85,14 @@ label begin_adventure:
     j "You need to choose one journal to document your time spent here, as you'll have no recollection of this ever happening later."
     j "Choose wisely!"
 
+    screen input_screen():
+        window:
+            has vbox
+            text "Choose your journal:" 
+            textbutton "Mystic Journal" action Return("Mystic Journal")
+            textbutton "Froggie Journal" action Return("Froggie Journal")
+            textbutton "Crunchy Journal" action Return("Puddle Journal")
+        $ chosen_journal = renpy.call_screen("input_screen")
 
 
     return
