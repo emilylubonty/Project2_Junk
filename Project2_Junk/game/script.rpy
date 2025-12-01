@@ -94,8 +94,8 @@ label begin_adventure:
     j "You need to choose one journal to document your time spent here, as you'll have no recollection of this ever happening later."
     j "Choose wisely!"
 
-    textbutton "Mystic Journal" 
-    if textbutton clicked: 
+    TextButton "Mystic Journal" 
+    if TextButton clicked: 
         jump mystic
     
 
