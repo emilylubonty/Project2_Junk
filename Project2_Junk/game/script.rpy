@@ -13,10 +13,6 @@ image bg room empty = "Bookshelf Empty.png"
 # Journal Choices
 image Journal Choices = "Choices.png"
 
-# Mouse buttons, 1 for left, 3 for right
-LEFT = 1
-RIGHT = 3
-
 # Jasmine's blinking transition
 image jasmine: 
     "Jasmine.png"
@@ -90,5 +86,8 @@ label begin_adventure:
     j "You need to choose one journal to document your time spent here, as you'll have no recollection of this ever happening later."
     j "Choose wisely!"
 
-    show bg room empty at zoom_in
+    textbutton "Mystic Journal" action jump mystic
+
+label mystic: 
+    J "Mystic Journal chosen."
     return
