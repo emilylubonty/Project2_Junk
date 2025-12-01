@@ -137,6 +137,13 @@ label froggie_path:
     j "This journal contains tales and adventures of a little frog."
     j "Let's see what's inside!"
 
+    show Pages room at zoom_in
+    j "Aww, look how cute these frogs are!"
+    j "Oh, the pages are blank? That's toad-tally odd..."
+    j "...No? Okay." 
+    j "Since I brought you here to document your adventure, I guess you'll have to fill them in yourself!"
+    j "Hop to it!"
+
 return
 label chaos_path:
     show chaos room at zoom_in
@@ -144,4 +151,11 @@ label chaos_path:
     j "Well, whatever floats your boat, I guess..."
     j "The pages are a bit messy from the puddle it seems to have fallen in, but you can work around it."
     j "Let's see what's inside!"
+
+    show Pages room at zoom_in 
+    j "It looks like someone, or something, has taken a bite out of these pages..."
+    j "The pages are also stained with watermarks, but I suppose that adds to its charm."
+    
+
+
 return
