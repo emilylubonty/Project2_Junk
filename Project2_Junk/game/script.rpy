@@ -13,13 +13,7 @@ image bg room empty = "Bookshelf Empty.png"
 # Journal Choices
 image Journal Choices = "Choices.png"
 
-default keyResponse = 0
-
-screen userEntry ():
-    text str(keyResponse) 
-    key "1" action setVariable ("keyResponse", 1)
-    key "2" action setVariable ("keyResponse", 2)
-    key "3" action setVariable ("keyResponse", 3)
+$ result = im.Image("Choices.png", [ (0, 0, 200, 200),  "Mystic Journal" ])
 
 # Jasmine's blinking transition
 image jasmine: 
@@ -95,13 +89,7 @@ label begin_adventure:
     j "Choose wisely!"
 
     TextButton "Mystic Journal" 
-    if TextButton clicked: 
-        jump mystic
-    
 
-
-label mystic: 
-    j "Mystic Journal chosen."
 
 
 return
