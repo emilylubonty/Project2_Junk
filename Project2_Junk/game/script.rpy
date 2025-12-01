@@ -36,6 +36,9 @@ screen journal_selection:
         idle "Choices_%s.png" 
         hover "Choices_%s_hover.png" action Jump("chaos_path")
 
+# Journal interior images
+image pages room = "Open Journal.png"
+
 # Jasmine's blinking transition
 image jasmine: 
     "Jasmine.png"
@@ -115,16 +118,21 @@ label begin_adventure:
 label mystic_path:
     show mystic room at zoom_in
     j "So, you've chosen the Mystic Journal. Interesting choice!"
+    j "This journal is elegant and full of wisdom. It looks like it was crafted with care."
+    j "Let's see what's inside!"
+
+    show pages room at zoom_in
 
 label froggie_path:
     show froggie room at zoom_in
-    j "Classic choice! The froggie journal is always a fun one."
+    j "Classic choice! The Froggie Journal is always a fun one."
+    j "This journal contains tales and adventures of a little frog."
+    j "Let's see what's inside!"
 
 label chaos_path:
     show chaos room at zoom_in
     j "Oh... The Chaos Journal..."
     j "Well, whatever floats your boat, I guess..."
-
-
-
+    j "The pages are a bit messy from the puddle it seems to have fallen in, but you can work around it."
+    j "Let's see what's inside!"
 return
