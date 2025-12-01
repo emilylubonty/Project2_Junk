@@ -11,7 +11,10 @@ image bg room = "Bookshelf Filled.png"
 image bg room empty = "Bookshelf Empty.png"
 
 # Journal Choices
-image Mystic Journal = "Purple Bookshelf.png"
+image mystic room = "Purple Bookshelf.png"
+image froggie room = "Frog Bookshelf.png"
+image chaos room = "Chaos Bookshelf.png"
+
 image Journal Choices = "Choices.png"
 
 screen journal_selection: 
@@ -21,7 +24,17 @@ screen journal_selection:
         idle "Choices_%s.png" 
         hover "Choices_%s_hover.png" action Jump("mystic_path")
 
-    
+    imagebutton:
+        xalign 0.5
+        yalign 0.5
+        idle "Choices_%s.png" 
+        hover "Choices_%s_hover.png" action Jump("froggie_path")
+
+    imagebutton:
+        xalign 1.0
+        yalign 0.5
+        idle "Choices_%s.png" 
+        hover "Choices_%s_hover.png" action Jump("chaos_path")
 
 # Jasmine's blinking transition
 image jasmine: 
@@ -100,9 +113,17 @@ label begin_adventure:
     call screen journal_selection
 
 label mystic_path:
-    show Purple Bookshelf at zoom_in
-    j "Mystical"
+    show mystic room at zoom_in
+    j "So, you've chosen the Mystic Journal. Interesting choice!"
 
+label froggie_path:
+    show froggie room at zoom_in
+    j "Classic choice! The froggie journal is always a fun one."
+
+label chaos_path:
+    show chaos room at zoom_in
+    j "Oh... The Chaos Journal..."
+    j "Well, whatever floats your boat, I guess..."
 
 
 
