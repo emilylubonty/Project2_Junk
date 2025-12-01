@@ -11,9 +11,15 @@ image bg room = "Bookshelf Filled.png"
 image bg room empty = "Bookshelf Empty.png"
 
 # Journal Choices
+image Mystic Journal = "Purple Bookshelf.png"
 image Journal Choices = "Choices.png"
 
-$ result = im.Image("Choices.png", [ (0, 0, 200, 200),  "Mystic Journal" ])
+screen journal_selection: 
+    imagebutton:
+        xalign 0.5
+        yalign 0.4
+        auto "Choices_%s.png" action [ToggleScreen("journal_selection"), Jump("mystic_path")]
+
 
 # Jasmine's blinking transition
 image jasmine: 
@@ -88,7 +94,13 @@ label begin_adventure:
     j "You need to choose one journal to document your time spent here, as you'll have no recollection of this ever happening later."
     j "Choose wisely!"
 
-    TextButton "Mystic Journal" 
+    scene black
+    call screen journal_selection
+
+label mystic_path:
+    show Purple Bookshelf at zoom_in
+    j "Mystical"
+
 
 
 
