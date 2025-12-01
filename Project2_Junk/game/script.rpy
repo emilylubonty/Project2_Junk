@@ -16,13 +16,12 @@ image Journal Choices = "Choices.png"
 
 screen journal_selection: 
     imagebutton:
-        xalign 0.5
-        yalign 0.4
-        idle "Choices_%s.png" action [ToggleScreen("journal_selection"), Jump("mystic_path")]
-        hover "Choices_%s_hover.png"
-        
+        xalign 0.0
+        yalign 0.5
+        idle "Choices_%s.png" 
+        hover "Choices_%s_hover.png" action Jump("mystic_path")
 
-
+    
 
 # Jasmine's blinking transition
 image jasmine: 
