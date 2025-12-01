@@ -18,7 +18,10 @@ screen journal_selection:
     imagebutton:
         xalign 0.5
         yalign 0.4
-        auto "Choices_%s.png" action [ToggleScreen("journal_selection"), Jump("mystic_path")]
+        idle "Choices_%s.png" action [ToggleScreen("journal_selection"), Jump("mystic_path")]
+        hover "Choices_%s_hover.png"
+        
+
 
 
 # Jasmine's blinking transition
