@@ -38,6 +38,10 @@ screen journal_selection:
 
 # Journal interior images
 image Pages room = "Open Journal.png"
+image tape = "Tape.png"
+image music note = "Music Note 1.png"
+image second music note = "Music Note 2.png"
+image drawing space = "Drawing Canvas.png"
 
 # Jasmine's blinking transition
 image jasmine: 
@@ -118,11 +122,12 @@ label begin_adventure:
 label mystic_path:
     show mystic room at zoom_in
     j "So, you've chosen the Mystic Journal. Interesting choice!"
-    j "This journal is elegant and full of wisdom. It looks like it was crafted with care."
+    j "This journal is elegant and radiates an ethereal aura. It looks like it was crafted with care."
     j "Let's see what's inside!"
 
     show Pages room at zoom_in
-    j "Wow! Look at these beautiful illustrations and writings."
+    j "Wow! Look at how crisp and clean these pages are."
+    
 
 return
 
