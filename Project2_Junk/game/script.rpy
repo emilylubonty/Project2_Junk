@@ -37,7 +37,7 @@ screen journal_selection:
         hover "Choices_%s_hover.png" action Jump("chaos_path")
 
 # Journal interior images
-image pages journal= "Open Journal.png"
+image Pages room = "Open Journal.png"
 
 # Jasmine's blinking transition
 image jasmine: 
@@ -121,7 +121,8 @@ label mystic_path:
     j "This journal is elegant and full of wisdom. It looks like it was crafted with care."
     j "Let's see what's inside!"
 
-    show pages journal at zoom_in
+    show Pages room at zoom_in
+    j "Wow! Look at these beautiful illustrations and writings."
 
 return
 
