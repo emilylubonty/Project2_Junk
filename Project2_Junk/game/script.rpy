@@ -13,6 +13,14 @@ image bg room empty = "Bookshelf Empty.png"
 # Journal Choices
 image Journal Choices = "Choices.png"
 
+default keyResponse = 0
+
+screen userEntry ():
+    text str(keyResponse) 
+    key "1" action setVariable ("keyResponse", 1)
+    key "2" action setVariable ("keyResponse", 2)
+    key "3" action setVariable ("keyResponse", 3)
+
 # Jasmine's blinking transition
 image jasmine: 
     "Jasmine.png"
@@ -86,8 +94,14 @@ label begin_adventure:
     j "You need to choose one journal to document your time spent here, as you'll have no recollection of this ever happening later."
     j "Choose wisely!"
 
-    textbutton "Mystic Journal" action jump mystic
+    textbutton "Mystic Journal" 
+    if textbutton clicked: 
+        jump mystic
+    
+
 
 label mystic: 
-    J "Mystic Journal chosen."
-    return
+    j "Mystic Journal chosen."
+
+
+return
