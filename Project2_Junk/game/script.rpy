@@ -1,29 +1,23 @@
-﻿# The script of the game goes in this file.
+﻿# The script of the game goes in this file
 
 # Jasmine's character definition
-
 define j = Character("Jasmine", color="#6f1a91")
 
 image Jasmine Neutral= "Jasmine.png"
 image Jasmine Blinking = "Jasmine Blink.png"
 
+# Background images
 image bg room = "Bookshelf Filled.png"
 image bg room empty = "Bookshelf Empty.png"
 
+# Journal Choices
 image Journal Choices = "Choices.png"
 
-screen input_screen():
-        frame:
-            xpadding 30
-            ypadding 30
-            
-            align (0.5, 0.5)
+# Mouse buttons, 1 for left, 3 for right
+LEFT = 1
+RIGHT = 3
 
-            vbox:
-                text "Choose your journal:" 
-                textbutton "Mystic Journal" action Return("Mystic Journal") 
-                textbutton "Froggie Journal" action Return("Froggie Journal") 
-                textbutton "Wrecked Journal" action Return("Wrecked Journal") 
+# Jasmine's blinking transition
 image jasmine: 
     "Jasmine.png"
     3.0
@@ -43,13 +37,11 @@ transform slide_right:
     xalign 0.9
     linear 1.0 xalign 1.4
 
-
 # POV character definition
 default povname = ""
 define pov = Character("[povname]")
 
 # The game starts here.
-
 label start:
     show bg room at zoom_in
 
@@ -98,7 +90,5 @@ label begin_adventure:
     j "You need to choose one journal to document your time spent here, as you'll have no recollection of this ever happening later."
     j "Choose wisely!"
 
-    $ chosen_journal = renpy.call_screen("input_screen") 
-
-
+    show bg room empty at zoom_in
     return
