@@ -1,5 +1,10 @@
 ﻿# The script of the game goes in this file
 
+# PyGame for drawing canvas
+import pygame
+from pygame import draw
+
+
 # Jasmine's character definition
 define j = Character("Jasmine", color="#6f1a91")
 
@@ -127,7 +132,8 @@ label mystic_path:
 
     show Pages room at zoom_in
     j "Wow! Look at how crisp and clean these pages are."
-    
+    j "The pages are completely blank, as if it was untouched."
+    j "There is plenty of room for you to document your time here, [povname]."
 
 return
 
@@ -142,7 +148,7 @@ label froggie_path:
     j "Oh, the pages are blank? That's toad-tally odd..."
     j "...No? Okay." 
     j "Since I brought you here to document your adventure, I guess you'll have to fill them in yourself!"
-    j "Hop to it!"
+    j "Hop to it, [povname]!"
 
 return
 label chaos_path:
@@ -155,7 +161,7 @@ label chaos_path:
     show Pages room at zoom_in 
     j "It looks like someone, or something, has taken a bite out of these pages..."
     j "The pages are also stained with watermarks, but I suppose that adds to its charm."
-    
+    j "The pages are blank though, which is perfect for the task of documenting your adventure, [povname]!"
 
 
 return
