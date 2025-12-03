@@ -135,14 +135,14 @@ style window:
     yalign gui.textbox_yalign
     ysize gui.textbox_height
 
-    background Image("gui/Dialogue Bubble.png", xalign=0.5, yalign=1.0)
+    background Image("gui/Dialogue.png", xalign=0.5, yalign=1.0)
 
 style namebox:
     xpos 510
     xanchor gui.name_xalign
-    xsize gui.namebox_width
+    xsize 150
     ypos gui.name_ypos
-    ysize gui.namebox_height
+    ysize 75
 
     background Frame("gui/nameplate.png", gui.namebox_borders, tile=gui.namebox_tile, xalign=gui.name_xalign)
     padding gui.namebox_borders.padding
@@ -155,8 +155,8 @@ style say_label:
 style say_dialogue:
     properties gui.text_properties("dialogue")
 
-    xpos 100
-    xsize 800
+    xpos 600
+    xsize 500
     ypos gui.dialogue_ypos
 
     adjust_spacing False
@@ -177,8 +177,7 @@ screen input(prompt):
     window:
 
         vbox:
-            xanchor gui.dialogue_text_xalign
-            xpos gui.dialogue_xpos
+            xalign 0.5
             xsize gui.dialogue_width
             ypos gui.dialogue_ypos
 
@@ -188,11 +187,12 @@ screen input(prompt):
 style input_prompt is default
 
 style input_prompt:
-    xalign gui.dialogue_text_xalign
+    xalign 0.5
+    xmaximum gui.dialogue_width
     properties gui.text_properties("input_prompt")
 
 style input:
-    xalign gui.dialogue_text_xalign
+    xalign 0.5
     xmaximum gui.dialogue_width
 
 
