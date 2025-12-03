@@ -1,10 +1,5 @@
 ﻿# The script of the game goes in this file
 
-# PyGame for drawing canvas
-import pygame
-from pygame import draw
-
-
 # Jasmine's character definition
 define j = Character("Jasmine", color="#6f1a91")
 
@@ -42,7 +37,9 @@ screen journal_selection:
         hover "Choices_%s_hover.png" action Jump("chaos_path")
 
 # Journal interior images
-image Pages room = "Open Journal.png"
+image Chaos Pages room = "Chaos Page.png"
+image Mystic Pages room = "Mystic Page.png"
+image Froggie Pages room = "Froggie Page.png"
 image tape = "Tape.png"
 image music note = "Music Note 1.png"
 image second music note = "Music Note 2.png"
@@ -130,7 +127,7 @@ label mystic_path:
     j "This journal is elegant and radiates an ethereal aura. It looks like it was crafted with care."
     j "Let's see what's inside!"
 
-    show Pages room at zoom_in
+    show Mystic Pages room at zoom_in
     j "Wow! Look at how crisp and clean these pages are."
     j "The pages are completely blank, as if it was untouched."
     j "There is plenty of room for you to document your time here, [povname]."
