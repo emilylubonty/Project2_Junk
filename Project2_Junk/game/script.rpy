@@ -17,29 +17,63 @@ image chaos room = "Chaos Bookshelf.png"
 
 image Journal Choices = "Choices.png"
 
-screen journal_selection: 
-    imagebutton:
-        xalign 0.0
-        yalign 0.5
-        idle "Choices_%s.png" 
-        hover "Choices_%s_hover.png" action Jump("mystic_path")
+image mystic hover = "Mystic Hover.png"
+image froggie hover = "Frog Hover.png"
+image chaos hover = "Chaos Hover.png"
 
-    imagebutton:
-        xalign 0.5
-        yalign 0.5
-        idle "Choices_%s.png" 
-        hover "Choices_%s_hover.png" action Jump("froggie_path")
+screen journal_selection:
+    # Track which journal is hovered
+    default h = None
 
+    # Base image with all three journals
+    add "Choices.png" at zoom_in align (0.5, 0.5)
+
+    # Show only the hovered highlight, layered above the base
+    if h == "mystic":
+        add "Mystic Hover.png" at zoom_in align (0.5, 0.5)
+    elif h == "froggie":
+        add "Frog Hover.png" at zoom_in align (0.5, 0.5)
+    elif h == "chaos":
+        add "Chaos Hover.png" at zoom_in align (0.5, 0.5)
+
+    # Invisible rectangular hit areas (assuming 1920x1080, split into thirds)
+    # Left third - Mystic
     imagebutton:
-        xalign 1.0
-        yalign 0.5
-        idle "Choices_%s.png" 
-        hover "Choices_%s_hover.png" action Jump("chaos_path")
+        idle Null(640, 1080)
+        hover Null(640, 1080)
+        xpos 0
+        ypos 0
+        hovered SetScreenVariable("h", "mystic")
+        unhovered SetScreenVariable("h", None)
+        action Jump("mystic_path")
+
+    # Middle third - Froggie
+    imagebutton:
+        idle Null(640, 1080)
+        hover Null(640, 1080)
+        xpos 640
+        ypos 0
+        hovered SetScreenVariable("h", "froggie")
+        unhovered SetScreenVariable("h", None)
+        action Jump("froggie_path")
+
+    # Right third - Chaos
+    imagebutton:
+        idle Null(640, 1080)
+        hover Null(640, 1080)
+        xpos 1280
+        ypos 0
+        hovered SetScreenVariable("h", "chaos")
+        unhovered SetScreenVariable("h", None)
+        action Jump("chaos_path")
+
+
 
 # Journal interior images
 image Chaos Pages room = "Chaos Page.png"
 image Mystic Pages room = "Mystic Page.png"
 image Froggie Pages room = "Froggie Page.png"
+
 image tape = "Tape.png"
 image music note = "Music Note 1.png"
 image second music note = "Music Note 2.png"
