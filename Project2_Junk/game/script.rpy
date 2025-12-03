@@ -72,7 +72,7 @@ screen journal_selection:
 # Journal interior images
 image Chaos Pages room = "Chaos Page.png"
 image Mystic Pages room = "Mystic Page.png"
-image Froggie Pages room = "Froggie Page.png"
+image Froggie Pages room = "Frog Page.png"
 
 image tape = "Tape.png"
 image music note = "Music Note 1.png"
@@ -174,14 +174,15 @@ label froggie_path:
     j "This journal contains tales and adventures of a little frog."
     j "Let's see what's inside!"
 
-    show Pages room at zoom_in
-    j "Aww, look how cute these frogs are!"
+    show Froggie Pages room at zoom_in
+    j "Oh cool, there are illustrations of lilypads on the inside!"
     j "Oh, the pages are blank? That's toad-tally odd..."
     j "...No? Okay." 
     j "Since I brought you here to document your adventure, I guess you'll have to fill them in yourself!"
     j "Hop to it, [povname]!"
 
 return
+
 label chaos_path:
     show chaos room at zoom_in
     j "Oh... The Chaos Journal..."
@@ -189,7 +190,7 @@ label chaos_path:
     j "The pages are a bit messy from the puddle it seems to have fallen in, but you can work around it."
     j "Let's see what's inside!"
 
-    show Pages room at zoom_in 
+    show Chaos Pages room at zoom_in 
     j "It looks like someone, or something, has taken a bite out of these pages..."
     j "The pages are also stained with watermarks, but I suppose that adds to its charm."
     j "The pages are blank though, which is perfect for the task of documenting your adventure, [povname]!"
