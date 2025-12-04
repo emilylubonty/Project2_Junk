@@ -164,6 +164,7 @@ label start:
         j "You can deal with this entire scene again then."
         jump start
 
+# Game begins here
 label begin_adventure:
 
     show bg room empty at zoom_in
@@ -185,6 +186,7 @@ label begin_adventure:
     elif journal_choice == "chaos":
         jump chaos_path
 
+# Mystic Journal Path
 label mystic_path:
     show mystic room at zoom_in
     jside "Here we are!"
@@ -216,6 +218,7 @@ label mystic_path:
 
 return
 
+# Froggie Journal Path
 label froggie_path:
     show froggie room at zoom_in
     jside "Classic choice!"
@@ -247,6 +250,7 @@ label froggie_path:
     j "With analog journals, you're unable to add music, images, or videos. But with digital journals, there are endless possibilities!"
 return
 
+# Chaos Journal Path
 label chaos_path:
     show chaos room at zoom_in
     jside "Oh... The Chaos Journal..."
