@@ -84,6 +84,8 @@ image Music Note = "Music Note 1.png"
 image second music note = "Music Note 2.png"
 image drawing space = "Drawing Canvas.png"
 
+
+
 # Jasmine's blinking transition
 image jasmine: 
     "Jasmine.png"
@@ -132,6 +134,7 @@ transform tape_pos:
 # POV character definition
 default povname = ""
 define pov = Character("[povname]")
+
 
 # The game starts here.
 label start:
@@ -207,7 +210,9 @@ label mystic_path:
     show drawing space at canvas_pos
     show tape at tape_pos
     j "You can also doodle and draw anything you want right onto the pages!"
-    j "Try it for yourself!"
+    j "Alternatively, you can upload images."
+
+    j "With analog journals, you're unable to add music, images, or videos. But with digital journals, there are endless possibilities!"
 
 return
 
@@ -237,7 +242,9 @@ label froggie_path:
     show drawing space at canvas_pos
     show tape at tape_pos
     j "You can also doodle and draw anything you want right onto the pages!"
-    j "Try it for yourself!"
+    j "Alternatively, you can upload images."
+
+    j "With analog journals, you're unable to add music, images, or videos. But with digital journals, there are endless possibilities!"
 return
 
 label chaos_path:
@@ -265,5 +272,8 @@ label chaos_path:
     show drawing space at canvas_pos
     show tape at tape_pos
     j "You can also doodle and draw anything you want right onto the pages!"
-    j "Try it for yourself!"
+    j "Alternatively, you can upload images."
+    
+    j "With analog journals, you're unable to add music, images, or videos. But with digital journals, there are endless possibilities!"
+
 return
