@@ -1,8 +1,11 @@
 ﻿# The script of the game goes in this file
 
 # Jasmine's character definition
-define j = Character("Jasmine", color="#6f1a91")
+define j = Character("Jasmine", color="#6f1a91", image = "jasmine")
+define jside = Character ("Jasmine", image = "jasmine")
 
+
+# Jasmine's images
 image Jasmine Neutral= "Jasmine.png"
 image Jasmine Blinking = "Jasmine Blink.png"
 
@@ -147,7 +150,6 @@ label begin_adventure:
     j "Follow me!"
 
     show Journal Choices at zoom_in
-
     j "[povname], I'm assigning you a task."
     j "You need to choose one journal to document your time spent here, as you'll have no recollection of this ever happening later."
     j "Choose wisely!"
@@ -157,6 +159,7 @@ label begin_adventure:
 
 label mystic_path:
     show mystic room at zoom_in
+    jside "Here we are!"
     j "So, you've chosen the Mystic Journal. Interesting choice!"
     j "This journal is elegant and radiates an ethereal aura. It looks like it was crafted with care."
     j "Let's see what's inside!"
