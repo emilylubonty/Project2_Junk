@@ -96,6 +96,7 @@ image jasmine:
 transform zoom_in:
     zoom 1.5
 
+
 transform center: 
     xalign 0.9
     yalign 0.5
@@ -111,6 +112,12 @@ transform left:
 transform music_pos:
     xpos 200
     ypos 100
+    zoom 0.6
+
+transform second_music: 
+    xpos 600
+    ypos 200
+    zoom 0.5
 
 # POV character definition
 default povname = ""
@@ -230,6 +237,7 @@ label chaos_path:
     j "Let me show you a few examples of what you can do with a junk journal."
 
     show Music Note at music_pos 
+    show second music note at second_music
     j "In the digital realm, you can easily add music to your journal."
     j "This can be a song stuck in your head, or just one of your favorites!"
 
