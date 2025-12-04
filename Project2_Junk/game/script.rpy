@@ -119,6 +119,16 @@ transform second_music:
     ypos 200
     zoom 0.5
 
+transform canvas_pos:
+    xpos 1000
+    ypos 300
+    zoom 0.7
+
+transform tape_pos:
+    xpos 1070
+    ypos 250
+    zoom 0.5
+
 # POV character definition
 default povname = ""
 define pov = Character("[povname]")
@@ -190,8 +200,14 @@ label mystic_path:
     j "Let me show you a few examples of what you can do with a junk journal."
 
     show Music Note at music_pos 
+    show second music note at second_music
     j "In the digital realm, you can easily add music to your journal."
     j "This can be a song stuck in your head, or just one of your favorites!"
+
+    show drawing space at canvas_pos
+    show tape at tape_pos
+    j "You can also doodle and draw anything you want right onto the pages!"
+    j "Try it for yourself!"
 
 return
 
@@ -214,9 +230,14 @@ label froggie_path:
     j "Let me show you a few examples of what you can do with a junk journal."
 
     show Music Note at music_pos 
+    show second music note at second_music
     j "In the digital realm, you can easily add music to your journal."
     j "This can be a song stuck in your head, or just one of your favorites!"
 
+    show drawing space at canvas_pos
+    show tape at tape_pos
+    j "You can also doodle and draw anything you want right onto the pages!"
+    j "Try it for yourself!"
 return
 
 label chaos_path:
@@ -241,4 +262,8 @@ label chaos_path:
     j "In the digital realm, you can easily add music to your journal."
     j "This can be a song stuck in your head, or just one of your favorites!"
 
+    show drawing space at canvas_pos
+    show tape at tape_pos
+    j "You can also doodle and draw anything you want right onto the pages!"
+    j "Try it for yourself!"
 return
