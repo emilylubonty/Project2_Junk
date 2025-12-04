@@ -174,13 +174,14 @@ style say_dialogue:
 screen input(prompt):
     style_prefix "input"
 
-    window:
-
+    frame:
+        background Frame("gui/thoughtbubble.png", Borders(20, 20, 20, 20))
+        xalign 0.5
+        yalign 0.5
+        xpadding 50
+        ypadding 50
         vbox:
-            xalign 0.5
-            xsize gui.dialogue_width
-            ypos gui.dialogue_ypos
-
+            spacing 20
             text prompt style "input_prompt"
             input id "input"
 
@@ -190,10 +191,13 @@ style input_prompt:
     xalign 0.5
     xmaximum gui.dialogue_width
     properties gui.text_properties("input_prompt")
+    color gui.accent_color
+    font gui.input_prompt_font
 
 style input:
     xalign 0.5
     xmaximum gui.dialogue_width
+    font gui.input_prompt_font
 
 
 ## Choice screen ###############################################################
