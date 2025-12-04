@@ -3,6 +3,7 @@
 # Jasmine's character definition
 define j = Character("Jasmine", color="#6f1a91", image = "jasmine")
 define jside = Character ("Jasmine", image = "jasmine")
+image side j = "blink"
 
 
 # Jasmine's images
@@ -110,10 +111,7 @@ define pov = Character("[povname]")
 label start:
     show bg room at zoom_in
 
-    show jasmine at center
-    show jasmine at zoom_in
     j "Hey! I don't think we've met before. I'm Jasmine."
-
     j "What's your name?"
 
     $povname = renpy.input("What is your name?", length = 32)
@@ -140,14 +138,8 @@ label start:
 label begin_adventure:
 
     show bg room empty at zoom_in
-
-    show jasmine at center
-    show jasmine at zoom_in
     j "Glad to see you've made it. You're probably wondering why I brought you here."
     j "Well... I'll explain soon. Let me show you something important."
-
-    show jasmine at slide_right
-    j "Follow me!"
 
     show Journal Choices at zoom_in
     j "[povname], I'm assigning you a task."
@@ -173,7 +165,8 @@ return
 
 label froggie_path:
     show froggie room at zoom_in
-    j "Classic choice! The Froggie Journal is always a fun one."
+    jside "Classic choice!"
+    j "The Froggie Journal is always a fun one."
     j "This journal contains tales and adventures of a little frog."
     j "Let's see what's inside!"
 
@@ -188,8 +181,8 @@ return
 
 label chaos_path:
     show chaos room at zoom_in
-    j "Oh... The Chaos Journal..."
-    j "Well, whatever floats your boat, I guess..."
+    jside "Oh... The Chaos Journal..."
+    j "Well, whatever floats your boat, [povname]..."
     j "The pages are a bit messy from the puddle it seems to have fallen in, but you can work around it."
     j "Let's see what's inside!"
 
@@ -197,6 +190,11 @@ label chaos_path:
     j "It looks like someone, or something, has taken a bite out of these pages..."
     j "The pages are also stained with watermarks, but I suppose that adds to its charm."
     j "The pages are blank though, which is perfect for the task of documenting your adventure, [povname]!"
+    j "You're probably still wondering why I brought you here, huh? Well, its to teach you about junk journals!"
+    j "A junk journal is a type of journaling that typically uses found or repurposed materials to create a unique and personalized journal."
+    j "As we move into a more digital world, junk journaling can be amplified with digital elements, such as music, photos, and even videos!"
+    j "Let me show you a few examples of what you can do with a junk journal."
+    show music note 
 
 
 return
