@@ -49,7 +49,7 @@ screen journal_selection:
         ypos 0
         hovered SetScreenVariable("h", "mystic")
         unhovered SetScreenVariable("h", None)
-        action Jump("mystic_path")
+        action Return("mystic")
 
     # Middle third - Froggie
     imagebutton:
@@ -59,7 +59,7 @@ screen journal_selection:
         ypos 0
         hovered SetScreenVariable("h", "froggie")
         unhovered SetScreenVariable("h", None)
-        action Jump("froggie_path")
+        action Return("froggie")
 
     # Right third - Chaos
     imagebutton:
@@ -69,7 +69,7 @@ screen journal_selection:
         ypos 0
         hovered SetScreenVariable("h", "chaos")
         unhovered SetScreenVariable("h", None)
-        action Jump("chaos_path")
+        action Return("chaos")
 
 
 
@@ -78,8 +78,9 @@ image Chaos Pages room = "Chaos Page.png"
 image Mystic Pages room = "Mystic Page.png"
 image Froggie Pages room = "Frog Page.png"
 
+# Additional junk journal element images
 image tape = "Tape.png"
-image music note = "Music Note 1.png"
+image Music Note = "Music Note 1.png"
 image second music note = "Music Note 2.png"
 image drawing space = "Drawing Canvas.png"
 
@@ -91,7 +92,7 @@ image jasmine:
     0.15
     repeat
 
-# Jasmine's transforms
+# Transforms
 transform zoom_in:
     zoom 1.5
 
@@ -102,6 +103,14 @@ transform center:
 transform slide_right:
     xalign 0.9
     linear 1.0 xalign 1.4
+
+transform left: 
+    xalign 0.1
+    yalign 0.5
+
+transform music_pos:
+    xpos 200
+    ypos 100
 
 # POV character definition
 default povname = ""
@@ -147,7 +156,14 @@ label begin_adventure:
     j "Choose wisely!"
 
     scene black
-    call screen journal_selection
+    $journal_choice = renpy.call_screen("journal_selection")
+    
+    if journal_choice == "mystic":
+        jump mystic_path
+    elif journal_choice == "froggie":
+        jump froggie_path
+    elif journal_choice == "chaos":
+        jump chaos_path
 
 label mystic_path:
     show mystic room at zoom_in
@@ -194,7 +210,9 @@ label chaos_path:
     j "A junk journal is a type of journaling that typically uses found or repurposed materials to create a unique and personalized journal."
     j "As we move into a more digital world, junk journaling can be amplified with digital elements, such as music, photos, and even videos!"
     j "Let me show you a few examples of what you can do with a junk journal."
-    show music note 
 
+    show Music Note at music_pos 
+    j "In the digital realm, you can easily add music to your journal."
+    j "This can be a song stuck in your head, or just one of your favorites!"
 
 return
