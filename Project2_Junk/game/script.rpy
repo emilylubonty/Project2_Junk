@@ -175,7 +175,16 @@ label mystic_path:
     show Mystic Pages room at zoom_in
     j "Wow! Look at how crisp and clean these pages are."
     j "The pages are completely blank, as if it was untouched."
-    j "There is plenty of room for you to document your time here, [povname]."
+
+    j "You're probably still wondering why I brought you here, huh? Well, its to teach you about junk journals!"
+    j "A junk journal is a type of journaling that typically uses everyday 'junk' to create a unique and personalized journal."
+    j "This can include items like old tickets, fabric scraps, magazine clippings, and more."
+    j "As we move into a more digital world, junk journaling can be amplified with digital elements, such as music, photos, and even videos!"
+    j "Let me show you a few examples of what you can do with a junk journal."
+
+    show Music Note at music_pos 
+    j "In the digital realm, you can easily add music to your journal."
+    j "This can be a song stuck in your head, or just one of your favorites!"
 
 return
 
@@ -190,8 +199,16 @@ label froggie_path:
     j "Oh cool, there are illustrations of lilypads on the inside!"
     j "Oh, the pages are blank? That's toad-tally odd..."
     j "...No? Okay." 
-    j "Since I brought you here to document your adventure, I guess you'll have to fill them in yourself!"
-    j "Hop to it, [povname]!"
+
+    j "You're probably still wondering why I brought you here, huh? Well, its to teach you about junk journals!"
+    j "A junk journal is a type of journaling that typically uses everyday 'junk' to create a unique and personalized journal."
+    j "This can include items like old tickets, fabric scraps, magazine clippings, and more."
+    j "As we move into a more digital world, junk journaling can be amplified with digital elements, such as music, photos, and even videos!"
+    j "Let me show you a few examples of what you can do with a junk journal."
+
+    show Music Note at music_pos 
+    j "In the digital realm, you can easily add music to your journal."
+    j "This can be a song stuck in your head, or just one of your favorites!"
 
 return
 
@@ -205,9 +222,10 @@ label chaos_path:
     show Chaos Pages room at zoom_in 
     j "It looks like someone, or something, has taken a bite out of these pages..."
     j "The pages are also stained with watermarks, but I suppose that adds to its charm."
-    j "The pages are blank though, which is perfect for the task of documenting your adventure, [povname]!"
+
     j "You're probably still wondering why I brought you here, huh? Well, its to teach you about junk journals!"
-    j "A junk journal is a type of journaling that typically uses found or repurposed materials to create a unique and personalized journal."
+    j "A junk journal is a type of journaling that typically uses everyday 'junk' to create a unique and personalized journal."
+    j "This can include items like old tickets, fabric scraps, magazine clippings, and more."
     j "As we move into a more digital world, junk journaling can be amplified with digital elements, such as music, photos, and even videos!"
     j "Let me show you a few examples of what you can do with a junk journal."
 
