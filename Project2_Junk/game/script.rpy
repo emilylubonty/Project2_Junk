@@ -85,7 +85,6 @@ image second music note = "Music Note 2.png"
 image drawing space = "Drawing Canvas.png"
 
 
-
 # Jasmine's blinking transition
 image jasmine: 
     "Jasmine.png"
@@ -130,6 +129,11 @@ transform tape_pos:
     xpos 1070
     ypos 250
     zoom 0.5
+
+transform cat_pos:
+    xpos 1000
+    ypos 300
+    zoom 1.0
 
 # POV character definition
 default povname = ""
@@ -276,8 +280,8 @@ label chaos_path:
     show drawing space at canvas_pos
     show tape at tape_pos
     j "You can also doodle and draw anything you want right onto the pages!"
-    j "Alternatively, you can upload images."
-    
+    j "Alternatively, you can upload images and alter them digitally. Or, you could add in animations like GIFs!"
+
     j "With analog journals, you're unable to add music, images, or videos. But with digital journals, there are endless possibilities!"
 
 return
