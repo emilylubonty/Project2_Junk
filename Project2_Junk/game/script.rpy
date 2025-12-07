@@ -71,7 +71,12 @@ screen journal_selection:
         unhovered SetScreenVariable("h", None)
         action Return("chaos")
 
-
+# Journal entry display screen
+screen journal_entry_display(entry_text, pov_name):
+    if entry_text == " ": 
+        text " " at canvas_pos ysize 800 size 64
+    else: 
+        text "[entry_text]" xpos 1100 ypos 400 size 40
 
 # Journal interior images
 image Chaos Pages room = "Chaos Page.png"
@@ -134,6 +139,7 @@ transform cat_pos:
     xpos 1000
     ypos 300
     zoom 1.0
+
 
 # POV character definition
 default povname = ""
@@ -219,6 +225,13 @@ label mystic_path:
     j "Alternatively, you can upload images."
 
     j "With analog journals, you're unable to add music, images, or videos. But with digital journals, there are endless possibilities!"
+    j "Another benefit to digital junk journaling is that you can type out your entries instead of handwriting them."
+    j "How about you give it a try right now? Let's try writing a short entry about your experience so far. Or, you can write about anything you like!"
+    j "*please do NOT write anything inappropriate or else Jasmine will be sad :(*"
+
+    $entry = renpy.input("Write your journal entry here:", length = 500)
+    $entry = entry.strip()
+    call screen journal_entry_display(entry, povname)
 
 return
 
@@ -252,6 +265,13 @@ label froggie_path:
     j "Alternatively, you can upload images."
 
     j "With analog journals, you're unable to add music, images, or videos. But with digital journals, there are endless possibilities!"
+    j "Another benefit to digital junk journaling is that you can type out your entries instead of handwriting them."
+    j "How about you give it a try right now? Let's try writing a short entry about your experience so far. Or, you can write about anything you like!"
+    j "*please do NOT write anything inappropriate or else Jasmine will be sad :(*"
+
+    $entry = renpy.input("Write your journal entry here:", length = 500)
+    $entry = entry.strip()
+    call screen journal_entry_display(entry, povname)
 return
 
 # Chaos Journal Path
@@ -281,7 +301,17 @@ label chaos_path:
     show tape at tape_pos
     j "You can also doodle and draw anything you want right onto the pages!"
     j "Alternatively, you can upload images and alter them digitally. Or, you could add in animations like GIFs!"
+    j "With analog journals, you're unable to add music, images, or videos. But with digital journals, there are endless possibilities."
 
-    j "With analog journals, you're unable to add music, images, or videos. But with digital journals, there are endless possibilities!"
+    j "Another benefit to digital junk journaling is that you can type out your entries instead of handwriting them."
+    j "How about you give it a try right now? Let's try writing a short entry about your experience so far. Or, you can write about anything you like!"
+    j "*please do NOT write anything inappropriate or else Jasmine will be sad :(*"
+
+    $entry = renpy.input("Write your journal entry here:", length = 500)
+    $entry = entry.strip()
+    call screen journal_entry_display(entry, povname)
+    
+
+    
 
 return
