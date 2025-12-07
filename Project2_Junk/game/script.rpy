@@ -232,6 +232,7 @@ label mystic_path:
 
     j "With analog journals, you're unable to add music, images, or videos. But with digital journals, there are endless possibilities!"
     j "Another benefit to digital junk journaling is that you can type out your entries instead of handwriting them."
+    j "This can be useful if you're on the go and want to jot something down, or just feel like typing instead of writing by hand."
     j "How about you give it a try right now? Let's try writing a short entry about your experience so far. Or, you can write about anything you like!"
     j "*please do NOT write anything inappropriate or else Jasmine will be sad :(*"
 
@@ -287,6 +288,7 @@ label froggie_path:
 
     j "With analog journals, you're unable to add music, images, or videos. But with digital journals, there are endless possibilities!"
     j "Another benefit to digital junk journaling is that you can type out your entries instead of handwriting them."
+    j "This can be useful if you're on the go and want to jot something down, or just feel like typing instead of writing by hand."
     j "How about you give it a try right now? Let's try writing a short entry about your experience so far. Or, you can write about anything you like!"
     j "*please do NOT write anything inappropriate or else Jasmine will be sad :(*"
 
@@ -340,6 +342,7 @@ label chaos_path:
     j "With analog journals, you're unable to add music, images, or videos. But with digital journals, there are endless possibilities."
 
     j "Another benefit to digital junk journaling is that you can type out your entries instead of handwriting them."
+    j "This can be useful if you're on the go and want to jot something down, or just feel like typing instead of writing by hand."
     j "How about you give it a try right now? Let's try writing a short entry about your experience so far. Or, you can write about anything you like!"
     j "*please do NOT write anything inappropriate or else Jasmine will be sad :(*"
 
