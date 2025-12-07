@@ -66,7 +66,7 @@ define gui.name_text_font = "jersey15-regular.ttf"
 define gui.interface_text_font = "jersey15-regular.ttf"
 
 ## The font used for input text prompts.
-define gui.input_prompt_font = "Schoolbell-Regular.ttf"
+define gui.input_prompt_font = "jersey15-regular.ttf"
 
 ## The size of normal dialogue text.
 define gui.text_size = 40
