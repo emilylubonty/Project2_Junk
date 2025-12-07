@@ -74,11 +74,10 @@ screen journal_selection:
 # Journal entry display screen
 screen journal_entry_display(entry_text):
     if entry_text == "": 
-        text "" at canvas_pos ysize 800 size 64
+        text "" at canvas_pos ysize 800 size 64 font "Schoolbell-Regular.ttf"
     else: 
-        text "[entry_text]" xpos 1100 ypos 400 size 40
+        text "[entry_text]" xpos 1100 ypos 400 size 40 font "Schoolbell-Regular.ttf"
     
-    # Click anywhere to dismiss and continue
     button:
         xfill True
         yfill True
