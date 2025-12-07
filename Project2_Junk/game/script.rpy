@@ -72,12 +72,17 @@ screen journal_selection:
         action Return("chaos")
 
 # Journal entry display screen
-screen journal_entry_display(entry_text, pov_name):
-    if entry_text == " ": 
-        text " " at canvas_pos ysize 800 size 64
+screen journal_entry_display(entry_text):
+    if entry_text == "": 
+        text "" at canvas_pos ysize 800 size 64
     else: 
         text "[entry_text]" xpos 1100 ypos 400 size 40
     
+    # Click anywhere to dismiss and continue
+    button:
+        xfill True
+        yfill True
+        action Return()
 
 # Journal interior images
 image Chaos Pages room = "Chaos Page.png"
@@ -233,18 +238,22 @@ label mystic_path:
     $entry = renpy.input("Write your journal entry here:", length = 500)
     $entry = entry.strip()
 
-    call screen journal_entry_display(entry, povname)
-    if entry == " ":
+    show screen journal_entry_display(entry)
+    if entry == "":
         j "You didn't write anything? That's okay, junk journals don't have to be filled with words."
         j "It's your journal, you can put whatever you want in it!"
+        j "If you don't feel like writing anything, that's A-OK!"
+        j "The most important thing is to make it your own. You can add anything you want to your journal, there are no rules!"
+        j "It seems our time together is coming to an end. I hope you documented our adventure well." 
+        j "If you didn't well... That's okay. I had fun, [povname], and I hope you did too. See you around!"
+        return
     else:
-    j "Great job, [povname]! You've completed your first junk journal entry!"
-    j "Junk journaling is all about creativity and self-expression. There's no right or wrong way to do it."
-    j "If you don't feel like writing anything, that's A-OK!"
-    j "The most important thing is to make it your own. You can add anything you want to your journal, there are no rules!"
-    j "It seems our time together is coming to an end. I hope you documented our adventure well." 
-    j "If you didn't well... That's okay. I had fun, [povname], and I hope you did too. See you around!"
-
+        j "Great job, [povname]! You've completed your first junk journal entry!"
+        j "Junk journaling is all about creativity and self-expression. There's no right or wrong way to do it."
+        j "If you don't feel like writing anything, that's A-OK!"
+        j "The most important thing is to make it your own. You can add anything you want to your journal, there are no rules!"
+        j "It seems our time together is coming to an end. I hope you documented our adventure well." 
+        j "If you didn't well... That's okay. I had fun, [povname], and I hope you did too. See you around!"
 return
 
 # Froggie Journal Path
@@ -283,17 +292,22 @@ label froggie_path:
 
     $entry = renpy.input("Write your journal entry here:", length = 500)
     $entry = entry.strip()
-    call screen journal_entry_display(entry, povname)
-    if entry == " ":
+    show screen journal_entry_display(entry)
+    if entry == "":
         j "You didn't write anything? That's okay, junk journals don't have to be filled with words."
         j "It's your journal, you can put whatever you want in it!"
+        j "If you don't feel like writing anything, that's A-OK!"
+        j "The most important thing is to make it your own. You can add anything you want to your journal, there are no rules!"
+        j "It seems our time together is coming to an end. I hope you documented our adventure well." 
+        j "If you didn't well... That's okay. I had fun, [povname], and I hope you did too. See you around!"
+        return
     else:
-    j "Great job, [povname]! You've completed your first junk journal entry!"
-    j "Junk journaling is all about creativity and self-expression. There's no right or wrong way to do it."
-    j "If you don't feel like writing anything, that's A-OK!"
-    j "The most important thing is to make it your own. You can add anything you want to your journal, there are no rules!"
-    j "It seems our time together is coming to an end. I hope you documented our adventure well." 
-    j "If you didn't well... That's okay. I had fun, [povname], and I hope you did too. See you around!"
+        j "Great job, [povname]! You've completed your first junk journal entry!"
+        j "Junk journaling is all about creativity and self-expression. There's no right or wrong way to do it."
+        j "If you don't feel like writing anything, that's A-OK!"
+        j "The most important thing is to make it your own. You can add anything you want to your journal, there are no rules!"
+        j "It seems our time together is coming to an end. I hope you documented our adventure well." 
+        j "If you didn't well... That's okay. I had fun, [povname], and I hope you did too. See you around!"
 return
 
 # Chaos Journal Path
@@ -331,15 +345,20 @@ label chaos_path:
 
     $entry = renpy.input("Write your journal entry here:", length = 500)
     $entry = entry.strip()
-    call screen journal_entry_display(entry, povname)
-    if entry == " ":
+    show screen journal_entry_display(entry)
+    if entry == "":
         j "You didn't write anything? That's okay, junk journals don't have to be filled with words."
         j "It's your journal, you can put whatever you want in it!"
+        j "If you don't feel like writing anything, that's A-OK!"
+        j "The most important thing is to make it your own. You can add anything you want to your journal, there are no rules!"
+        j "It seems our time together is coming to an end. I hope you documented our adventure well." 
+        j "If you didn't well... That's okay. I had fun, [povname], and I hope you did too. See you around!"
+        return
     else:
-    j "Great job, [povname]! You've completed your first junk journal entry!"
-    j "Junk journaling is all about creativity and self-expression. There's no right or wrong way to do it."
-    j "If you don't feel like writing anything, that's A-OK!"
-    j "The most important thing is to make it your own. You can add anything you want to your journal, there are no rules!"
-    j "It seems our time together is coming to an end. I hope you documented our adventure well." 
-    j "If you didn't well... That's okay. I had fun, [povname], and I hope you did too. See you around!"
+        j "Great job, [povname]! You've completed your first junk journal entry!"
+        j "Junk journaling is all about creativity and self-expression. There's no right or wrong way to do it."
+        j "If you don't feel like writing anything, that's A-OK!"
+        j "The most important thing is to make it your own. You can add anything you want to your journal, there are no rules!"
+        j "It seems our time together is coming to an end. I hope you documented our adventure well." 
+        j "If you didn't well... That's okay. I had fun, [povname], and I hope you did too. See you around!"
 return
